@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+
+    <TextureView
+        android:id="@+id/cameraTextureView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Fullscreen face overlay -->
+    <com.example.tf_face.FaceOverlayView
+        android:id="@+id/faceOverlayView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/faceOverlayImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="120dp"
+        >
+    </ImageView>
+
+    <LinearLayout
+        android:id="@+id/controlsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#88000000"
+        android:padding="16dp"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:id="@+id/statusTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Position 1: Face in the middle"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnCapturePosition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Capture Position"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:background="#1A237E" />
+
+    </LinearLayout>
+
+</FrameLayout>
+

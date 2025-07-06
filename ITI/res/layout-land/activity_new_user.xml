@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <!-- Back button aligned top left with margin -->
+    <Button
+        android:id="@+id/fabBack"
+        android:layout_width="67dp"
+        android:layout_height="78dp"
+        android:layout_margin="16dp"
+        android:text="Back"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical|start" />
+
+    <!-- Scrollable main content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register New User"
+                android:textSize="24sp"
+                android:textColor="#1A237E"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- Plain EditText -->
+            <EditText
+                android:id="@+id/nameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your name"
+                android:inputType="textPersonName"
+                android:imeOptions="actionDone"
+                android:background="@android:drawable/edit_text"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/themeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Theme"
+                android:textSize="16sp"
+                android:textColor="#424242"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Spinner with background to simulate input box -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/edit_text"
+                android:padding="8dp"
+                android:layout_marginBottom="24dp">
+
+                <Spinner
+                    android:id="@+id/themeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:padding="12dp" />
+            </LinearLayout>
+
+            <!-- Normal Button for continue -->
+            <Button
+                android:id="@+id/btnContinue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:background="#1A237E"
+                android:textColor="@android:color/white"
+                android:padding="12dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

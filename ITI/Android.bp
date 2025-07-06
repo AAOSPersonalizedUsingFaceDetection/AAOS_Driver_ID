@@ -1,0 +1,43 @@
+android_app {
+    name: "FaceAuthAndroid",
+    srcs: [
+        "src/**/*.kt",
+    ],
+    resource_dirs: ["res"],
+    asset_dirs: ["assets"],
+    aaptflags: [
+        // Avoid compression on tflite files as the Interpreter
+        // can not load compressed flat buffer formats.
+        // (*appt compresses all assets into the apk by default)
+        // See https://elinux.org/Android_aapt for more detail.
+        "-0 .tflite",
+    ],
+    jni_libs: [
+        "libtensorflowlite_jni",
+    ],
+    certificate: "platform",
+    platform_apis: true,
+    privileged: true,
+    static_libs: [
+        "androidx.appcompat_appcompat",
+        "org.tensorflow_tensorflow-lite",
+        "org.tensorflow_tensorflow-lite-support",
+        "org.tensorflow_tensorflow-lite-api",
+        "kotlinx_coroutines_android",
+        "androidx.room_room-runtime",
+        "androidx.room_room-common",
+        "androidx.room_room-ktx",
+        "androidx.sqlite_sqlite",
+        "kotlin-stdlib",
+        "kotlinx_coroutines",
+        "androidx.annotation_annotation",
+    ],
+    plugins: [
+       "androidx.room_room-compiler-plugin",
+    ],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+    visibility: ["//visibility:public"],
+}

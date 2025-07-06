@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="24dp"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Face Recognition"
+        android:textSize="28sp"
+        android:textColor="#1A237E"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="sans-serif-medium" />
+
+    <Button
+        android:id="@+id/btnCurrentUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Current User"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        android:background="#1A237E"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/btnNewUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New User"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:background="#1A237E"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+# Declare your domain types
+type tf_face_app, domain;
+type tf_face_app_exec, exec_type, system_file_type, file_type;
+
+
+# Custom file type for shared face data (db, images)
+type tf_face_data_file, file_type, data_file_type;
+
+
+allow tf_face_app tf_face_data_file:dir { search open read write getattr };
+allow tf_face_app tf_face_data_file:file { create open read write getattr setattr lock ioctl unlink };
+
+allow tf_face_app tf_face_data_file:dir add_name;
+

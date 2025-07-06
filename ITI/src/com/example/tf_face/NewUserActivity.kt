@@ -22,7 +22,7 @@ class NewUserActivity : AppCompatActivity() {
         val continueButton = findViewById<Button>(R.id.btnContinue)
 
         // Set up theme spinner
-        val themes = arrayOf("Light", "Dark")
+        
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, themes)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         themeSpinner?.adapter = adapter

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/recognition">
+
+    <!-- Fullscreen camera preview -->
+    <TextureView
+        android:id="@+id/cameraTextureView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <!-- Info layout aligned bottom center -->
+    <LinearLayout
+        android:id="@+id/infoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#88000000"
+        android:padding="16dp"
+        android:layout_gravity="bottom|center_horizontal">
+
+        <TextView
+            android:id="@+id/greetingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Initializing camera..."
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:fontFamily="sans-serif-medium" />
+    </LinearLayout>
+</FrameLayout>

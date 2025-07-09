@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper"
+    android:padding="24dp"
+    android:orientation="vertical"
+    android:gravity="bottom">
+
+    <!-- CardView for main content -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        cardview:cardBackgroundColor="#FFFFFF"
+        cardview:cardElevation="4dp"
+        cardview:cardCornerRadius="8dp"
+        cardview:cardUseCompatPadding="true"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Face Recognition"
+                android:textSize="28sp"
+                android:textColor="#005699"
+                android:textStyle="bold"
+                android:layout_marginBottom="32dp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="sans-serif-medium"/>
+
+            <!-- Current User Button -->
+            <Button
+                android:id="@+id/btnCurrentUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Current User"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#008CFB"
+                android:textColor="@android:color/white"
+                android:padding="12dp"/>
+
+            <!-- New User Button -->
+            <Button
+                android:id="@+id/btnNewUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="New User"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:backgroundTint="#008CFB"
+                android:textColor="@android:color/white"
+                android:padding="12dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

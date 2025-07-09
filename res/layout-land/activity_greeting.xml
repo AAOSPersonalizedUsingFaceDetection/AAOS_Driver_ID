@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- Top-left button -->
+    <Button
+        android:id="@+id/showAllUsersBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Manager"
+        android:textSize="32sp"
+        android:padding="12dp"
+        android:textColor="@android:color/white"
+        android:background="#1A237E"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp" />
+
+    <!-- Bottom-center CardView with greeting text -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/greetingCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        card_view:cardCornerRadius="16dp"
+        card_view:cardElevation="8dp"
+        android:layout_margin="16dp"
+        android:backgroundTint="@android:color/white">
+
+        <TextView
+            android:id="@+id/greetingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="#1A237E"
+            android:padding="20dp" />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
